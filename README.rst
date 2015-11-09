@@ -32,6 +32,7 @@ This package can be installed using composer
 Or added to your composer dependencies:
 
 .. code-block:: json
+
     {
         "require": {
             "lipisha/lipisha-sdk": "^0.0.0"
@@ -76,14 +77,20 @@ Running tests requires php unit and setting up environment variables for authent
 
 First, run composer to install dependencies:
 
+.. code-block:: shell
+
     composer install
 
 Then set up environmental variables for authentication:
+
+.. code-block:: shell
 
     export LIPISHA_API_KEY="<YOUR LIPISHA API KEY>"
     export LIPISHA_API_SIGNATURE="<YOUR LIPISHA API SIGNATURE>"
 
 Run the tests:
+
+.. code-block:: shell
 
     phpunit tests/LipishaTest.php
 
