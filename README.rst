@@ -35,10 +35,21 @@ Or added to your composer dependencies:
 
     {
         "require": {
-            "lipisha/sdk": "^0.0.0"
+            "lipisha/sdk": "^1.0"
         },
     }
 
+For existing composer projects, you can immediately start using lipisha:
+
+.. code-block:: php
+    
+    $lipisa = new \Lipisha\Lipisha("<API-KEY>", "<API-SIGNATURE>", "<ENVIRONMENT>")
+
+For all other usecases, you can include the generated composer class autoloader.
+
+.. code-block:: php
+
+    require_once "vendor/autoload.php"
 
 Examples
 --------
