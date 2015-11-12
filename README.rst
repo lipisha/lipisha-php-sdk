@@ -27,7 +27,7 @@ Installation
 
 This package can be installed using composer
 
-    composer require lipisha/lipisha-sdk
+    composer require lipisha/sdk
     
 Or added to your composer dependencies:
 
@@ -35,7 +35,7 @@ Or added to your composer dependencies:
 
     {
         "require": {
-            "lipisha/lipisha-sdk": "^0.0.0"
+            "lipisha/sdk": "^0.0.0"
         },
     }
 
