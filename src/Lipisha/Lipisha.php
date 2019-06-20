@@ -365,6 +365,30 @@ class Lipisha {
         $api_parameters .= '&amount=' . urlencode($amount);
         return $this->execute($api_endpoint, $api_parameters);
     }
+    
+    /**
+     * Initiates a direct debit from the mobile money wallet e.g M-pesa, of your customer into your account.
+     * The customer gets an alert on their phone asking them to enter their PIN to confirm payment.
+     * 
+     * @param   string  $account_number Account number of the transaction account
+     * @param   string  @mobile_number  Mobile number of the customer e.g. 0722123456
+     * @param   string  @method         Method to carry out the transaction. e.g Paybill (M-Pesa)
+     * @param   int     @amount         Amount of money to receive.
+     * @param   string  @currency	Currency of the transaction e.g KES
+     * @param   srting  @reference	Your identifier for the transaction e.g TXN10101
+     * @return  LipishaResponse
+     */
+    public function request_money($account_number, $mobile_number, $method, $amount, $currency, $reference)
+    {
+        $api_endpoint = "request_money";
+        $api_parameters  = '&account_number=' . urlencode($account_number);
+        $api_parameters .= '&mobile_number=' . urlencode($mobile_number);
+        $api_parameters .= '&method=' . urlencode($method);
+        $api_parameters .= '&amount=' . urlencode($amount);
+        $api_parameters .= '&currency=' . urlencode($currency);
+        $api_parameters .= '&reference=' . urlencode($reference);
+        return $this->execute($api_endpoint, $api_parameters);
+    }
 
     /**
      * Sends airtime to provided mobile number from specified account
