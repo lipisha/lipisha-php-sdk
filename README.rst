@@ -67,7 +67,7 @@ Quick start
     // To connect to the sandbox, pass the environment asm ``TEST`` instead.
     
     // Get balance
-    $response = $lipisha.get_balance();
+    $response = $lipisha->get_balance();
     print_r($response)
     $balance = $response->content["balance"];
 
